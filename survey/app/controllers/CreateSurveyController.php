@@ -6,7 +6,7 @@ class CreateSurveyController extends BaseController {
 	{
 	
 		$rules = array(
-			'tabname'    => 'required|alphaNum', 
+			'tabname'    => 'required', 
 		);
 
 		$validator = Validator::make(Input::all(), $rules);
@@ -31,7 +31,7 @@ class CreateSurveyController extends BaseController {
 	{
 	
 		$rules = array(
-			'question'    => 'required|alphaNum', 
+			'question'    => 'required', 
 			'questiontype' => 'required|in:multiplechoice,text,numericchoices',
 		);
 
@@ -58,7 +58,7 @@ class CreateSurveyController extends BaseController {
 	{
 	
 		$rules = array(
-			'choicedescription'    => 'required|alphaNum', 
+			'choicedescription'    => 'required', 
 				);
 
 		$validator = Validator::make(Input::all(), $rules);
@@ -83,7 +83,7 @@ class CreateSurveyController extends BaseController {
 	{
 	
 		$rules = array(
-			'choicedescription'    => 'required|alphaNum', 
+			'choicedescription'    => 'required', 
 			'numericvalue'			=> 'required|numeric'
 				);
 
