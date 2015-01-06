@@ -15,3 +15,16 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/create', function()
+{
+	return View::make('create');
+});
+
+Route::post('createtab', array('uses' => 'CreateSurveyController@createtab', 'as'=>'createtab'));
+
+
+Route::get('/createcontents/{id}', function($id)
+{
+	return View::make('createcontents')->with('id', $id);
+});

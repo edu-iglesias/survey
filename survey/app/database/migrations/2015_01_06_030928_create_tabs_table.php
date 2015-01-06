@@ -15,6 +15,7 @@ class CreateTabsTable extends Migration {
             $table->increments('id');
             $table->string('tab_name', 50);
             $table->integer('tab_order');
+            $table->integer('status');
             $table->timestamps();
 		});
 
